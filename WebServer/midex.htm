@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    margin: 0%;
+}
+
+.inputNumber{
+    border-color: white;
+    height: 400px;
+    width: 200px;
+    appearance: none;
+    background-color: yellow;
+    border-radius: 100px;
+    box-shadow: inset 0px 0px ;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+    
+}
+
+.inputNumber .btnUp{
+    position: absolute;
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    cursor: pointer;
+}
+
+.inputNumber .btnUp span{
+    content: '';
+    position: absolute;
+    padding: 20px;
+    box-shadow: 2px -2px 0 1px #000 inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(135deg);
+}
+
+.inputNumber .btnDown span{
+    content: '';
+    position: absolute;
+    padding: 20px;
+    box-shadow: 2px -2px 0 1px #000 inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(314deg);
+}
+
+.inputNumber .btnDown{
+    position: absolute;
+    top: 200px;
+    background-color: yellow ;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: #000;
+    cursor: pointer;
+    
+    
+}
+
+.inputNumber label{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: yellow;
+    position: absolute;
+    top:150px;
+    left: 0;
+    height: 100px;
+    width: 200px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    
+
+}
+
+input{
+    border-color: white;
+    height: 400px;
+    width: 200px;
+    appearance: none;
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: inset 0px 0px ;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+
+input[id="LUZ"][type="checkbox"]:checked{
+    background-color: yellow;
+
+}
+
+input[id="LUZ"][type="checkbox"]:before{
+    content: 'LUZ';
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    border-bottom: 50px;
+    border-top: 50px;
+    border-left: 50px;
+    border-right: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 100px;
+    box-shadow: 0px 4px 8px 1px black;
+    position: absolute;
+    top:200px;
+    left: 0px;
+    transition:.5s;
+}
+
+
+
+input[id="LUZ"][type="checkbox"]:checked::before{
+    top: 0px; 
+    background-color: #fff;
+    color: #000;
+    
+    
+}
+
+
+
+
+
+
+input[id="ar"][type="checkbox"]:checked{
+    background-color: yellow;
+
+}
+
+input[id="ar"][type="checkbox"]:before{
+    content: 'AR';
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    border-bottom: 50px;
+    border-top: 50px;
+    border-left: 50px;
+    border-right: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 100px;
+    box-shadow: 0px 4px 8px 1px black;
+    position: absolute;
+    top:200px;
+    left: 0px;
+    transition:.5s;
+}
+
+
+
+input[id="ar"][type="checkbox"]:checked::before{
+    top: 0px; 
+    background-color: #fff;
+    color: #000;
+    
+    
+}
+
+
+@media screen and (max-height: 411px) {
+
+    .inputNumber{
+        border-color: white;
+        height: 300px;
+        width: 200px;
+        appearance: none;
+        background-color: rgba(0, 128, 0, 0);
+        border-radius: 100px;
+        box-shadow: inset 0px 0px ;
+        cursor: pointer;
+        transition: .5s;
+        position: relative;
+        
+    }
+
+    .inputNumber .btnUp span{
+        content: '';
+        position: absolute;
+        top: 25px;
+        padding: 20px;
+        box-shadow: 2px -2px 0 1px #000 inset;
+        border: solid transparent;
+        border-width: 0 0 2px 2px;
+        transform: rotate(135deg);
+    }
+    
+    .inputNumber .btnDown span{
+        content: '';
+        position: absolute;
+        top: 125px;
+        padding: 20px;
+        box-shadow: 2px -2px 0 1px #000 inset;
+        border: solid transparent;
+        border-width: 0 0 2px 2px;
+        transform: rotate(314deg);
+    }
+    
+    .inputNumber .btnUp{
+        position: absolute;
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: none;
+        cursor: pointer;
+    }
+
+    .inputNumber .btnDown{
+        position: absolute;
+        top: 99px;
+        background-color:yellow ;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        outline: #000;
+        cursor: pointer;
+        
+        
+    }
+    
+    .inputNumber label{
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: yellow;
+        position: absolute;
+        top: 99px;
+        left: 0;
+        height: 105px;
+        width: 200px;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    
+        
+    
+    }
+
+    
+input{
+    border-color: white;
+    height: 300px;
+    width: 200px;
+    appearance: none;
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: inset 0px 0px ;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+
+input[id="LUZ"][type="checkbox"]:checked{
+    background-color: yellow;
+
+}
+
+input[id="LUZ"][type="checkbox"]:before{
+    content: 'LUZ';
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    border-bottom: 50px;
+    border-top: 50px;
+    border-left: 50px;
+    border-right: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 100px;
+    box-shadow: 0px 4px 8px 1px black;
+    position: absolute;
+    top:100px;
+    left: 0px;
+    transition:.5s;
+}
+
+
+
+input[id="LUZ"][type="checkbox"]:checked::before{
+    top: 0px; 
+    background-color: #fff;
+    color: #000;
+    
+    
+}
+
+
+
+
+
+
+input[id="ar"][type="checkbox"]:checked{
+    background-color: yellow;
+
+}
+
+input[id="ar"][type="checkbox"]:before{
+    content: 'AR';
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    border-bottom: 50px;
+    border-top: 50px;
+    border-left: 50px;
+    border-right: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 100px;
+    box-shadow: 0px 4px 8px 1px black;
+    position: absolute;
+    top:100px;
+    left: 0px;
+    transition:.5s;
+}
+    
+}
+
+    </style>
+    <title>menu</title>
+    
+</head>
+<body>
+   <input id="LUZ" type="checkbox">
+   <input id="ar" placeholder="AR" type="checkbox">
+
+
+   <div class="inputNumber">
+       <button  id="tempUp" class="btnUp">
+            <span></span>
+       </button>
+
+       <label id="mostrarTempAr">0</label>
+
+       <button  id="tempDown" class="btnDown">
+            <span></span>
+       </button>
+   </div>
+
+</body>
+<script defer>
+class Controle{
+    constructor(){
+        this.luz="0"
+        this.ar="0"
+        this.tempArMin=18
+        this.tempArMax=32
+        this.tempAr=24
+        this.btnUp = document.getElementById("tempUp")
+        this.btnDown = document.getElementById("tempDown")
+        this.chckBoxLuz = document.getElementById("LUZ")
+        this.chckBoxAr = document.getElementById("ar")
+
+        
+    }
+
+    mostrarTempAr(){
+        document.getElementById("mostrarTempAr").innerHTML = this.tempAr
+    }
+     aumentarTempAr(){
+        if(this.tempAr < this.tempArMax){
+            fetch(document.URL+'tempup', {
+                method: 'GET'})
+            this.tempAr++
+            document.getElementById("mostrarTempAr").innerHTML = this.tempAr
+            console.log(this.tempAr)
+        }
+        
+    }
+    diminuirTempAr(){
+        if(this.tempAr > this.tempArMin){
+            fetch(document.URL+'tempdown', {
+                method: 'GET'})
+            this.tempAr--
+            document.getElementById("mostrarTempAr").innerHTML = this.tempAr
+            console.log(this.tempAr)
+        }
+    }
+
+    ligarLuz(){
+        if(this.chckBoxLuz.checked === true){
+            console.log("ligar luz")
+            fetch(document.URL+'luzon', {
+                method: 'GET'})
+        } else{
+            console.log("desligar luz")
+            fetch(document.URL+'luzoff', {
+                method: 'GET'})
+        }
+    }
+
+    ligarAr(){
+        if(this.chckBoxAr.checked === true){
+            console.log("ligar ar")
+            fetch(document.URL+'aron', {
+                method: 'GET'})
+        } else{
+            console.log("desligar ar")
+            fetch(document.URL+'aroff', {
+                method: 'GET'})
+        }
+    }
+    
+    initEvents(){
+        this.mostrarTempAr()
+        this.btnUp.addEventListener("click", function(){arduino.aumentarTempAr()})
+        this.btnDown.addEventListener("click", function(){arduino.diminuirTempAr()})
+        this.chckBoxLuz.addEventListener("change",function(){arduino.ligarLuz()})
+        this.chckBoxAr.addEventListener("change",function(){arduino.ligarAr()})
+
+
+    }
+
+
+
+}
+function teste(){
+    console.log("ola")
+}
+
+const arduino = new Controle()
+arduino.initEvents()
+
+
+
+
+
+</script>
+</html>
